@@ -2,10 +2,10 @@
 #### Visit my biolink
 https://bio.link/mrbros1509
 
-website status
+- Website status
 | Dev | Stable| Published |
 | :--- | :---: | ---: |
 | ❌️ |  ✅️ | ❌️ |
 
-Download website editor and guide
+## Download website editor and guide
 [In development](_Blank)
