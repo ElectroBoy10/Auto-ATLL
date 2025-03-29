@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATLL Automotive | Professional Auto Repair</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+/* ----- Base Styles ----- */
+:root {
+    --primary: #2A5C82;    /* Professional Navy Blue */
+    --accent: #FF6B35;     /* Vibrant Orange */
+    --secondary: #11B5B8;  /* Teal */
+    --text: #333333;       /* Dark Gray */
+    --highlight: #CF2E2E;  /* Red for warnings/approvals */
+    --bg-light: #F8FAFC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: var(--bg-light);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* ----- Logo Styles ----- */
+.logo-container {
+    position: center;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .logo-container {
+        top: 10px;
+        left: 10px;
+        padding: 5px;
+    }
+    .logo {
+        max-width: 100px;
+    }
+}
+
+/* ----- Hero Section ----- */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://atllauto.wordpress.com/wp-content/uploads/2025/01/img-20250108-wa00022486954313949975452.jpg?w=1024');
+    background-size: cover;
+    background-position: center;
+    /* min-height: 100vh;  Remove or adjust as needed */
+    position: relative; /* Needed for absolute positioning of logo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: var(--accent);
+    display: block;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.hero p {
+    color: var(--secondary);
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+/* ----- WhatsApp Buttons ----- */
+.whatsapp-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.whatsapp-button {
+    background: var(--accent);
+    color: white !important;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.whatsapp-button i {
+    font-size: 1rem;
+}
+
+.whatsapp-button:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* ----- Services Section ----- */
+.services {
+    padding: 60px 20px;
+    background: white;
+}
+
+.services h2 {
+    color: var(--primary);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.service-group {
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 8px;
+    background: var(--bg-light);
+}
+
+.service-group h3 {
+    color: var(--accent);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.service-list {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.service-list li {
+    padding: 12px;
+    margin: 10px 0;
+    background: white;
+    border-left: 4px solid var(--secondary);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    font-size: 0.9rem;
+}
+
+/* ----- Approval & Address ----- */
+.approval {
+    text-align: center;
+    margin: 40px 0 20px;
+    color: var(--highlight);
+    font-size: 1rem;
+}
+
+.address {
+    text-align: center;
+    color: #6B7280;
+    font-style: italic;
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+}
+
+/* ----- Footer ----- */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--primary);
+    color: white;
+}
+
+footer a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+/* ----- Mobile Optimization ----- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .whatsapp-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .whatsapp-button {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
+
+    .services h2 {
+        font-size: 1.8rem;
+    }
+
+    .service-group h3 {
+        font-size: 1.1rem;
+    }
+
+    .service-list li {
+        font-size: 0.85rem;
+    }
+
+    .approval, .address {
+        font-size: 0.85rem;
+    }
+}
+
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+      <div class="logo-container">
+    <img src="https://atllauto.wordpress.com/wp-content/uploads/2025/01/cropped-cropped-resizedimage_2025-01-06_18-20-45_2561.png" alt="ATLL Automotive Logo" class="logo">
+</div>
+    <div class="hero-content">
+      <h1>
+        <span>Welcome</span>
+        ATLL Automotive
+      </h1>
+      <p>
+        We Will Get You Road-Ready In No Time
+      </p>
+      <div class="whatsapp-buttons">
+        <a href="https://api.whatsapp.com/send?phone=27678555932&text=U%20are%20contacting%20%20_*Anton*_%20(Delete%20this%20message)"
+          class="whatsapp-button">
+          <i class="fab fa-whatsapp"></i>
+          Reception
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=27682440580&text=U%20are%20contacting%20%20_*Anton*_%20(Delete%20this%20message)"
+          class="whatsapp-button">
+          <i class="fab fa-whatsapp"></i>
+          Anton
+        </a>
+        <p>
+    </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <h2><span style="color: var(--primary)">OUR</span> SERVICES</h2>
+
+    <div class="service-group">
+      <h3>1. General Automotive Services</h3>
+      <ul class="service-list">
+        <li>Diagnostics, Fault Finding</li>
+        <li>Minor & Major Services</li>
+        <li>Auto Electrical Services</li>
+        <li>30 Point Inspection</li>
+        <li>Chassis Wearpoint repair & Replacement</li>
+        <li>Oil and air filter changes</li>
+        <li>Skimming of disks</li>
+        <li>Parts replacement / repair</li>
+        <li>Under Carriage Inspection and Repair</li>
+        <li>Lubricant change = oil change (radiator flush / antifreeze replacement)</li>
+        <li>Brake Check / replacement</li>
+        <li>Light bulb replacement</li>
+        <li>Any other Mechanical needs</li>
+      </ul>
+    </div>
+
+    <div class="service-group">
+      <h3>2. Forklift Services</h3>
+      <ul class="service-list">
+        <li>Forklift Load Test (LME and LMI)</li>
+      </ul>
+    </div>
+
+    <div class="service-group">
+      <h3>3. Emergency Services</h3>
+      <ul class="service-list">
+        <li>Auto Electrician on Call</li>
+      </ul>
+    </div>
+
+    <div class="service-group">
+      <h3>4. Custom Fabrication</h3>
+      <ul class="service-list">
+        <li>Aluminium welding For vehicle parts</li>
+        <li>Milling & Turning / Custom Vehicle parts</li>
+      </ul>
+    </div>
+<center>
+  <a href="https://share.samsungcloud.com/sharedalbum/f0RuphnzGh">
+    <button style="background-color: #FF6B35; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+      View Gallery
+    </button>
+  </a>
+</center>
+
+    <p class="approval">
+      <strong>RMI Approved</strong>
+    </p>
+    <p class="address">
+      <em>Premises at Springs Strubenvale</em>
+    </p>
+  </section>
+
+  <footer>
+    <hr style="margin: 20px auto; width: 50%; opacity: 0.3;">
+    <p>
+      <a href="https://mrbros1509.bio.link">Made by MrBros</a>
+    </p>
+  </footer>
+</body>
+</html>
+
