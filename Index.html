@@ -3,276 +3,363 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ATLL Automotive | Professional Auto Repair</title>
+  <title>ATLL Automotive | Professional Auto Repair Services in Springs</title>
+  <meta name="description" content="RMI-approved automotive repair center in Springs Strubenvale. Expert car servicing, forklift maintenance, and 24/7 emergency auto electrical services.">
+  <meta name="keywords" content="car repair, vehicle maintenance, auto electrical, forklift service, RMI certified, Springs mechanic">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
   <style>
-/* ----- Base Styles ----- */
-:root {
-    --primary: #2A5C82;    /* Professional Navy Blue */
-    --accent: #FF6B35;     /* Vibrant Orange */
-    --secondary: #11B5B8;  /* Teal */
-    --text: #333333;       /* Dark Gray */
-    --highlight: #CF2E2E;  /* Red for warnings/approvals */
-    --bg-light: #F8FAFC;
-}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
+  :root {
+      --primary: #2A5C82;
+      --accent: #FF6B35;
+      --secondary: #11B5B8;
+      --text: #333333;
+      --highlight: #CF2E2E;
+      --bg-light: #F8FAFC;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-body {
-    background: var(--bg-light);
-    color: var(--text);
-    line-height: 1.7;
-}
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
 
-/* ----- Logo Styles ----- */
-.logo-container {
-    position: center;
-    top: 20px;
-    left: 20px;
-    z-index: 2;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+  html {
+      scroll-behavior: smooth;
+      font-size: 100%;
+  }
 
-.logo {
-    max-width: 150px;
-    height: auto;
-    display: block;
-}
+  body {
+      font-family: 'Roboto', 'Segoe UI', sans-serif;
+      background: var(--bg-light);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+  }
 
-@media (max-width: 768px) {
-    .logo-container {
-        top: 10px;
-        left: 10px;
-        padding: 5px;
-    }
-    .logo {
-        max-width: 100px;
-    }
-}
 
-/* ----- Hero Section ----- */
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                url('https://atllauto.wordpress.com/wp-content/uploads/2025/01/img-20250108-wa00022486954313949975452.jpg?w=1024');
-    background-size: cover;
-    background-position: center;
-    /* min-height: 100vh;  Remove or adjust as needed */
-    position: relative; /* Needed for absolute positioning of logo */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    color: white;
-}
+  .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+  }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
+  [aria-hidden="true"] {
+      aria-hidden: true;
+  }
 
-.hero h1 span {
-    color: var(--accent);
-    display: block;
-    font-weight: 300;
-    font-size: 1.5rem;
-}
 
-.hero p {
-    color: var(--secondary);
-    margin-bottom: 25px;
-    font-size: 1rem;
-}
+  .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      color: white;
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                  url('https://atllauto.wordpress.com/wp-content/uploads/2025/01/img-20250108-wa00022486954313949975452.jpg?w=1024') center/cover fixed;
+      isolation: isolate;
+  }
 
-/* ----- WhatsApp Buttons ----- */
-.whatsapp-buttons {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
+  .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(45deg, var(--primary) 10%, transparent 90%);
+      mix-blend-mode: multiply;
+      z-index: -1;
+  }
 
-.whatsapp-button {
-    background: var(--accent);
-    color: white !important;
-    padding: 12px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 0.9rem;
-}
+  .logo-container {
+      position: absolute;
+      top: 2rem;
+      width: 100%;
+      z-index: 2;
+  }
 
-.whatsapp-button i {
-    font-size: 1rem;
-}
+  .logo {
+      width: min(180px, 40vw);
+      height: auto;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  }
 
-.whatsapp-button:hover {
-    background: var(--primary);
-    transform: translateY(-2px);
-}
+  .logo:hover {
+      transform: scale(1.05) rotate(-2deg);
+  }
 
-/* ----- Services Section ----- */
-.services {
-    padding: 60px 20px;
-    background: white;
-}
+  .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      animation: fadeIn 1s ease-out;
+  }
 
-.services h2 {
-    color: var(--primary);
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 40px;
-}
+  .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
 
-.service-group {
-    margin-bottom: 30px;
-    padding: 15px;
-    border-radius: 8px;
-    background: var(--bg-light);
-}
+  .hero h1 span {
+      display: block;
+      font-size: 0.6em;
+      font-weight: 300;
+      color: var(--accent);
+      margin-bottom: 0.5em;
+  }
 
-.service-group h3 {
-    color: var(--accent);
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-}
 
-.service-list {
-    list-style: none;
-    max-width: 800px;
-    margin: 0 auto;
-}
+  .services {
+      padding: 4rem 1rem;
+      background: white;
+  }
 
-.service-list li {
-    padding: 12px;
-    margin: 10px 0;
-    background: white;
-    border-left: 4px solid var(--secondary);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-    font-size: 0.9rem;
-}
+  .services h2 {
+      text-align: center;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      color: var(--primary);
+      margin-bottom: 3rem;
+      position: relative;
+  }
 
-/* ----- Approval & Address ----- */
-.approval {
-    text-align: center;
-    margin: 40px 0 20px;
-    color: var(--highlight);
-    font-size: 1rem;
-}
+  .services h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      margin: 1rem auto;
+  }
 
-.address {
-    text-align: center;
-    color: #6B7280;
-    font-style: italic;
-    margin-bottom: 40px;
-    font-size: 0.9rem;
-}
+  .service-group {
+      max-width: 1000px;
+      margin: 0 auto 2rem;
+      padding: 2rem;
+      border-radius: 1rem;
+      background: var(--bg-light);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: var(--transition);
+  }
 
-/* ----- Footer ----- */
-footer {
-    text-align: center;
-    padding: 30px 20px;
-    background: var(--primary);
-    color: white;
-}
+  .service-group.visible {
+      opacity: 1;
+      transform: translateY(0);
+  }
 
-footer a {
-    color: var(--secondary);
-    text-decoration: none;
-}
+  .service-group h3 {
+      color: var(--accent);
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+  }
 
-/* ----- Mobile Optimization ----- */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-    .hero p {
-        font-size: 0.9rem;
-    }
+  .service-group h3::before {
+      content: '⚙️';
+      font-size: 1.2em;
+  }
 
-    .whatsapp-buttons {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
+  .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      list-style: none;
+  }
 
-    .whatsapp-button {
-        font-size: 0.8rem;
-        padding: 10px 20px;
-    }
+  .service-list li {
+      position: relative;
+      padding: 1.25rem;
+      background: white;
+      border-radius: 0.5rem;
+      border-left: 4px solid var(--secondary);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: var(--transition);
+  }
 
-    .services h2 {
-        font-size: 1.8rem;
-    }
+  .service-list li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
 
-    .service-group h3 {
-        font-size: 1.1rem;
-    }
 
-    .service-list li {
-        font-size: 0.85rem;
-    }
+  .whatsapp-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+  }
 
-    .approval, .address {
-        font-size: 0.85rem;
-    }
-}
+  .whatsapp-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      background: var(--accent);
+      color: white !important;
+      box-shadow: 0 4px 6px rgba(255,107,53,0.2);
+  }
 
+  .whatsapp-button:hover {
+      background: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(42,92,130,0.3);
+  }
+
+  .gallery-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem  2.5rem;
+      border-radius: 50px;
+      background: var(--primary);
+      color: white !important;
+      text-decoration: none;
+      transition: var(--transition);
+      margin: 2rem 0;
+      box-shadow: 0 4px 6px rgba(42,92,130,0.2);
+  }
+
+  .gallery-button:hover {
+      background: var(--accent);
+      transform: translateY(-2px);
+  }
+
+
+  @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+  }
+
+  .approval {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      background: var(--highlight);
+      color: white;
+      font-weight: 500;
+      animation: pulse 2s infinite;
+  }
+
+
+  footer {
+      background: var(--primary);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+  }
+
+  footer::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background: var(--bg-light);
+      transform: skewY(-2deg);
+  }
+
+  footer a {
+      color: var(--secondary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+  }
+
+  footer a:hover {
+      color: white;
+  }
+
+  @media (max-width: 768px) {
+      .hero {
+          background-attachment: scroll;
+      }
+
+      .service-group {
+          padding: 1.5rem;
+          margin: 0 -1rem 1.5rem;
+      }
+
+      .service-list {
+          grid-template-columns: 1fr;
+      }
+  }
+
+  @media (max-width: 480px) {
+      .whatsapp-button,
+      .gallery-button {
+          width: 100%;
+          justify-content: center;
+      }
+  }
   </style>
 </head>
 <body>
 
-  <section class="hero">
+
+  <section class="hero" aria-labelledby="mainHeading">
       <div class="logo-container">
-    <img src="https://atllauto.wordpress.com/wp-content/uploads/2025/01/cropped-cropped-resizedimage_2025-01-06_18-20-45_2561.png" alt="ATLL Automotive Logo" class="logo">
-</div>
-    <div class="hero-content">
-      <h1>
-        <span>Welcome</span>
-        ATLL Automotive
-      </h1>
-      <p>
-        We Will Get You Road-Ready In No Time
-      </p>
-      <div class="whatsapp-buttons">
-        <a href="https://api.whatsapp.com/send?phone=27678555932&text=U%20are%20contacting%20%20_*Anton*_%20(Delete%20this%20message)"
-          class="whatsapp-button">
-          <i class="fab fa-whatsapp"></i>
-          Reception
-        </a>
-        <a href="https://api.whatsapp.com/send?phone=27682440580&text=U%20are%20contacting%20%20_*Anton*_%20(Delete%20this%20message)"
-          class="whatsapp-button">
-          <i class="fab fa-whatsapp"></i>
-          Anton
-        </a>
-        <p>
-    </p>
+          <img src="https://atllauto.wordpress.com/wp-content/uploads/2025/01/cropped-cropped-resizedimage_2025-01-06_18-20-45_2561.png" 
+               alt="ATLL Automotive Logo" 
+               class="logo"
+               loading="lazy">
       </div>
-    </div>
+      <div class="hero-content">
+          <h1 id="mainHeading">
+              <span>Welcome to</span>
+              ATLL Automotive
+          </h1>
+          <p class="tagline">Your Trusted Partner in Vehicle Maintenance</p>
+          <div class="whatsapp-buttons">
+              <a href="https://api.whatsapp.com/send?phone=27678555932" 
+                 class="whatsapp-button"
+                 aria-label="Contact Reception via WhatsApp">
+                  <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                  Reception
+              </a>
+              <a href="https://api.whatsapp.com/send?phone=27682440580" 
+                 class="whatsapp-button"
+                 aria-label="Contact Anton via WhatsApp">
+                  <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                  Anton
+              </a>
+          </div>
+      </div>
   </section>
 
-  <section class="services">
-    <h2><span style="color: var(--primary)">OUR</span> SERVICES</h2>
 
-    <div class="service-group">
-      <h3>1. General Automotive Services</h3>
-      <ul class="service-list">
+  <main class="services">
+      <h2>Our Professional Services</h2>
+      <div class="service-group">
+    <h3>1. General Automotive Services</h3>
+    <ul class="service-list">
         <li>Diagnostics, Fault Finding</li>
         <li>Minor & Major Services</li>
         <li>Auto Electrical Services</li>
@@ -286,52 +373,98 @@ footer a {
         <li>Brake Check / replacement</li>
         <li>Light bulb replacement</li>
         <li>Any other Mechanical needs</li>
-      </ul>
-    </div>
+    </ul>
+</div>
 
-    <div class="service-group">
-      <h3>2. Forklift Services</h3>
-      <ul class="service-list">
+<div class="service-group">
+    <h3>2. Forklift Services</h3>
+    <ul class="service-list">
         <li>Forklift Load Test (LME and LMI)</li>
-      </ul>
-    </div>
+    </ul>
+</div>
 
-    <div class="service-group">
-      <h3>3. Emergency Services</h3>
-      <ul class="service-list">
+<div class="service-group">
+    <h3>3. Emergency Services</h3>
+    <ul class="service-list">
         <li>Auto Electrician on Call</li>
-      </ul>
-    </div>
+    </ul>
+</div>
 
-    <div class="service-group">
-      <h3>4. Custom Fabrication</h3>
-      <ul class="service-list">
+<div class="service-group">
+    <h3>4. Custom Fabrication</h3>
+    <ul class="service-list">
         <li>Aluminium welding For vehicle parts</li>
         <li>Milling & Turning / Custom Vehicle parts</li>
-      </ul>
-    </div>
-<center>
-  <a href="https://share.samsungcloud.com/sharedalbum/cAWdwLgP95">
-    <button style="background-color: #FF6B35; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
-      View Gallery
-    </button>
-  </a>
-</center>
+    </ul>
+</div>
 
-    <p class="approval">
-      <strong>RMI Approved</strong>
-    </p>
-    <p class="address">
-      <em>Premises at Springs Strubenvale</em>
-    </p>
-  </section>
+      <a href="https://share.samsungcloud.com/sharedalbum/cAWdwLgP95" 
+         class="gallery-button"
+         aria-label="View our service gallery">
+          <i class="fas fa-photo-video" aria-hidden="true"></i>
+          View Gallery
+      </a>
 
+      <p class="approval">
+          <i class="fas fa-certificate" aria-hidden="true"></i>
+          <span>RMI Approved</span>
+      </p>
+      <address class="address">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+          Springs Strubenvale, Gauteng
+      </address>
+  </main>
+
+  
   <footer>
-    <hr style="margin: 20px auto; width: 50%; opacity: 0.3;">
-    <p>
-      <a href="https://mrbros1509.bio.link">Made by MrBros</a>
-    </p>
+      <hr aria-hidden="true">
+      <p>
+          Made by 
+          <a href="https://mrbros1509.bio.link" target="_blank" rel="noopener">
+              MrBros
+          </a>
+      </p>
   </footer>
+
+  <script>
+  const animateOnScroll = (elements, threshold = 0.1) => {
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add('visible');
+              }
+          });
+      }, { threshold });
+
+      elements.forEach(el => observer.observe(el));
+  };
+
+  // Initializeing animations
+  document.addEventListener('DOMContentLoaded', () => {
+      // Animated service groups
+      animateOnScroll(document.querySelectorAll('.service-group'));
+      
+      //smooth scroll to all anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+              e.preventDefault();
+              const target = document.querySelector(this.getAttribute('href'));
+              if (target) {
+                  target.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start'
+                  });
+              }
+          });
+      });
+  });
+  
+  document.querySelectorAll('a[href^="http"]').forEach(link => {
+      link.addEventListener('click', function() {
+          this.classList.add('loading');
+          this.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Loading...`;
+      });
+  });
+  </script>
 </body>
 </html>
-
