@@ -9,7 +9,7 @@ https://bio.link/mrbros1509
 
 | Dev | Stable| Published |
 | :--- | :---: | ---: |
-| ✅ |  ✅ | ✅ |
+| ✅ | ✅ | ✅ |
 
 ---
 
